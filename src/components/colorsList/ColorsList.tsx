@@ -3,8 +3,8 @@ import "./colorsList.css";
 
 const ColorsList: React.FC<ColorsListProps> = ({ colors, onClick }) => {
   return (
-    <div className="colors-contener">
-      {colors.map((color: string) => {
+    <div className="colors-container">
+      {colors.map((color) => {
         return (
           <div
             className="color-box"

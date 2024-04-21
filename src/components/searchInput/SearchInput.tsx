@@ -9,8 +9,8 @@ const SearchInput: React.FC<SearchInputProps> = ({
   return (
     <div className="searchbox-contener">
       <form>
-        <label>type color: </label>
-        <input onChange={onChange} value={clearInput} />
+        <label htmlFor="search-input">type color: </label>
+        <input id="search-input" onChange={onChange} value={clearInput} />
         <button type="button" onClick={onClick}>
           Clear
         </button>

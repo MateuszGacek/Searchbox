@@ -6,11 +6,11 @@ import tabTitle from "./utils/tabTitle";
 
 const App: React.FC = () => {
   const [colorsList, setColorsList] = useState<string[]>(colorsData);
-  const [textInput, setTextInput] = useState<string>("");
+  const [textInput, setTextInput] = useState("");
   const defaultTabTitle: string = "Searchbox";
 
-  const searchColorHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const inputValue: string = e.target.value;
+  const searchColor = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
 
     const newColorsList: string[] = colorsData.filter((color) => {
       if (color.includes(inputValue)) {
@@ -24,13 +24,13 @@ const App: React.FC = () => {
     setTextInput(inputValue);
   };
 
-  const checkColorHandler = (color: string): void => {
+  const checkColor = (color: string) => {
     if (color === textInput) {
       setColorsList(["green"]);
     }
   };
 
-  const clearInputHandler = (): void => {
+  const clearInput = () => {
     setColorsList(colorsData);
     setTextInput("");
     tabTitle("", [], defaultTabTitle);
@@ -39,11 +39,11 @@ const App: React.FC = () => {
   return (
     <div>
       <SearchInput
-        onChange={searchColorHandler}
-        onClick={clearInputHandler}
+        onChange={searchColor}
+        onClick={clearInput}
         clearInput={textInput}
       />
-      <ColorsList colors={colorsList} onClick={checkColorHandler} />
+      <ColorsList colors={colorsList} onClick={checkColor} />
     </div>
   );
 };
