@@ -1,7 +1,7 @@
-import { searchInputProps } from "../models/searchInputProps";
-import "./SearchInput.css";
+import { SearchInputProps } from "../../models/SearchInputProps";
+import "./searchInput.css";
 
-const SearchInput: React.FC<searchInputProps> = ({
+const SearchInput: React.FC<SearchInputProps> = ({
   onChange,
   onClick,
   clearInput,

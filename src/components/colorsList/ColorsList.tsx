@@ -1,7 +1,7 @@
-import { colorsListProps } from "../models/colorsListProps";
-import "./ColorsList.css";
+import { ColorsListProps } from "../../models/ColorsListProps";
+import "./colorsList.css";
 
-const ColorsList: React.FC<colorsListProps> = ({ colors, onClick }) => {
+const ColorsList: React.FC<ColorsListProps> = ({ colors, onClick }) => {
   return (
     <div className="colors-contener">
       {colors.map((color: string) => {

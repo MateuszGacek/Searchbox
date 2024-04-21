@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { colorsData } from "./store/colorsData";
-import ColorsList from "./components/ColorsList";
-import SearchInput from "./components/SearchInput";
+import ColorsList from "./components/colorsList/ColorsList";
+import SearchInput from "./components/searchInput/SearchInput";
 import tabTitle from "./utils/tabTitle";
 
 const App: React.FC = () => {
